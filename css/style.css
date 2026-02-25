@@ -7,27 +7,27 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&display=swap');
 
 :root {
-  /* Classic 80s palette — warm beige, amber accents, terminal dark */
-  --bg-page:        #e8dcc8;
-  --bg-sidebar:     #1a1a2e;
-  --bg-sidebar-alt: #222240;
-  --bg-card:        #f5f0e0;
-  --bg-card-hover:  #1a1a2e;
-  --text-primary:   #1a1a1a;
-  --text-secondary: #4a4a3a;
-  --text-sidebar:   #c8a050;
-  --text-sidebar-hi:#f0c050;
-  --accent:         #c04000;
-  --accent-hover:   #e05000;
-  --accent-link:    #004080;
-  --accent-link-hv: #c04000;
-  --border-color:   #a09880;
-  --border-sidebar: #c8a050;
+  /* Classic retro palette — warm parchment tones, muted accents */
+  --bg-page:        #eee8d5;
+  --bg-sidebar:     #2b2b3a;
+  --bg-sidebar-alt: #33334a;
+  --bg-card:        #f6f1e3;
+  --bg-card-hover:  #ece4d0;
+  --text-primary:   #2a2a2a;
+  --text-secondary: #5a5a4e;
+  --text-sidebar:   #b0a080;
+  --text-sidebar-hi:#d4c8a0;
+  --accent:         #8b5e3c;
+  --accent-hover:   #a06e48;
+  --accent-link:    #4a6e8a;
+  --accent-link-hv: #8b5e3c;
+  --border-color:   #c0b89a;
+  --border-sidebar: #6a6474;
 
   --font-body:  'IBM Plex Mono', 'Courier New', 'Courier', monospace;
   --font-mono:  'IBM Plex Mono', 'Courier New', 'Courier', monospace;
 
-  --sidebar-width: 220px;
+  --sidebar-width: 180px;
 }
 
 /* --- Reset --- */
@@ -80,7 +80,7 @@ a:hover {
 }
 
 .sidebar-header {
-  padding: 1.2rem 1rem 0.8rem;
+  padding: 0.9rem 0.8rem 0.6rem;
   border-bottom: 1px solid var(--border-sidebar);
 }
 
@@ -118,12 +118,12 @@ a:hover {
 
 .nav-link {
   font-family: var(--font-mono);
-  font-size: 0.8rem;
-  padding: 0.45rem 1rem;
+  font-size: 0.78rem;
+  padding: 0.4rem 0.8rem;
   color: var(--text-sidebar);
   text-decoration: none;
   border-left: 2px solid transparent;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.3px;
 }
 .nav-link:hover {
   color: var(--text-sidebar-hi);
@@ -132,14 +132,14 @@ a:hover {
   text-decoration: none;
 }
 .nav-link.active {
-  color: var(--bg-sidebar);
-  background: var(--text-sidebar-hi);
+  color: var(--text-sidebar-hi);
+  background: var(--bg-sidebar-alt);
   border-left-color: var(--text-sidebar-hi);
   font-weight: 600;
 }
 
 .sidebar-footer {
-  padding: 1rem 1.2rem;
+  padding: 0.7rem 0.8rem;
   border-top: 1px solid var(--border-sidebar);
   margin-top: auto;
 }
@@ -215,8 +215,8 @@ a:hover {
 }
 .home-card:hover {
   background: var(--bg-card-hover);
-  color: var(--text-sidebar-hi);
-  border-color: var(--border-sidebar);
+  color: var(--text-primary);
+  border-color: var(--accent);
 }
 .home-card h3 {
   font-family: var(--font-mono);
@@ -226,7 +226,7 @@ a:hover {
   margin-bottom: 0.3rem;
 }
 .home-card:hover h3 {
-  color: var(--text-sidebar-hi);
+  color: var(--accent-hover);
 }
 .home-card p {
   font-size: 0.8rem;
@@ -234,7 +234,7 @@ a:hover {
   line-height: 1.5;
 }
 .home-card:hover p {
-  color: var(--text-sidebar);
+  color: var(--text-secondary);
 }
 .home-card .card-icon {
   font-size: 1rem;
@@ -281,8 +281,8 @@ a:hover {
 }
 .post-card:hover {
   background: var(--bg-card-hover);
-  border-color: var(--border-sidebar);
-  color: var(--text-sidebar-hi);
+  border-color: var(--accent);
+  color: var(--text-primary);
 }
 .post-card .post-title {
   font-family: var(--font-mono);
@@ -291,7 +291,7 @@ a:hover {
   color: var(--accent-link);
 }
 .post-card:hover .post-title {
-  color: var(--text-sidebar-hi);
+  color: var(--accent-hover);
 }
 .post-card .post-date {
   font-family: var(--font-mono);
@@ -299,7 +299,7 @@ a:hover {
   color: var(--text-secondary);
 }
 .post-card:hover .post-date {
-  color: var(--text-sidebar);
+  color: var(--text-secondary);
 }
 .post-card .post-excerpt {
   font-size: 0.82rem;
@@ -307,7 +307,7 @@ a:hover {
   margin-top: 0.1rem;
 }
 .post-card:hover .post-excerpt {
-  color: var(--text-sidebar);
+  color: var(--text-secondary);
 }
 .post-card .post-tags {
   display: flex;
@@ -319,7 +319,7 @@ a:hover {
   font-family: var(--font-mono);
   font-size: 0.65rem;
   padding: 0.1rem 0.4rem;
-  background: #d8d0b8;
+  background: #ddd8c4;
   color: var(--text-secondary);
   border: 1px solid var(--border-color);
 }
@@ -393,8 +393,8 @@ a:hover {
 }
 
 .post-body .block-code {
-  background: #1a1a2e;
-  border: 1px solid #c8a050;
+  background: var(--bg-sidebar);
+  border: 1px solid var(--border-sidebar);
   padding: 0.8rem 1rem;
   overflow-x: auto;
   margin: 1rem 0;
@@ -402,7 +402,7 @@ a:hover {
 .post-body .block-code pre {
   font-family: var(--font-mono);
   font-size: 0.82rem;
-  color: #c8a050;
+  color: var(--text-sidebar);
   white-space: pre;
   line-height: 1.6;
 }
@@ -473,10 +473,10 @@ a:hover {
   left: 0;
   right: 0;
   padding: 0.3rem 0.6rem;
-  background: rgba(26,26,46,0.85);
+  background: rgba(43,43,58,0.85);
   font-family: var(--font-mono);
   font-size: 0.7rem;
-  color: #c8a050;
+  color: var(--text-sidebar);
 }
 
 /* ============================================================
@@ -485,7 +485,7 @@ a:hover {
 .lightbox {
   position: fixed;
   inset: 0;
-  background: rgba(26,26,46,0.95);
+  background: rgba(43,43,58,0.95);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -504,7 +504,7 @@ a:hover {
   transform: translateX(-50%);
   font-family: var(--font-mono);
   font-size: 0.82rem;
-  color: #c8a050;
+  color: var(--text-sidebar);
   text-align: center;
 }
 .lightbox .lightbox-close {
@@ -512,7 +512,7 @@ a:hover {
   top: 1.5rem;
   right: 1.5rem;
   font-size: 2rem;
-  color: #c8a050;
+  color: var(--text-sidebar);
   cursor: pointer;
   background: none;
   border: none;
