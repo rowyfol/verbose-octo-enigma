@@ -13,22 +13,22 @@
     'lab-notes': {
       title: 'Lab Notes',
       desc: 'Electrical engineering concepts, circuit analysis, and technical deep-dives.',
-      icon: '⚡'
+      icon: '&gt;&gt;'
     },
     'projects': {
       title: 'Projects',
       desc: 'Hands-on builds, schematics, and engineering experiments.',
-      icon: '🔧'
+      icon: '[+]'
     },
     'musings': {
       title: 'Musings',
       desc: 'Thoughts on shows, quotes, ideas, and everything in between.',
-      icon: '💭'
+      icon: '...'
     },
     'gallery': {
       title: 'Gallery',
       desc: 'Memorable moments and images worth sharing.',
-      icon: '📸'
+      icon: '[*]'
     }
   };
 
